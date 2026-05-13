@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evangelion - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-index"> <h1>Neon Genesis Evangelion</h1>
+
+    <div class="container">
+    <p>Em 2015, quinze anos após um cataclismo global conhecido como Segundo Impacto, o adolescente Shinji Ikari é convocado para a futurística Tokyo-3 por seu pai distante Gendo Ikari, diretor de uma força paramilitar especial chamada Nerv. Shinji testemunha as forças das Nações Unidas lutando contra um Anjo, uma criatura de uma raça de seres monstruosos gigantes cujo despertar foi predito pelos Manuscritos do Mar Morto. Por causa dos campos de força quase impenetráveis dos Anjos, as gigantescas biomáquinas Evangelion da Nerv, sincronizadas com o sistema nervoso de seus pilotos e possuindo seus próprios campos de força, são as únicas armas capazes de impedi-los de aniquilar a humanidade. A oficial Misato Katsuragi escolta Shinji até o complexo da organização abaixo da cidade, onde seu pai o pressiona a pilotar o Evangelion Unidade-01 contra o Anjo. Sem treinamento, Shinji é rapidamente dominado na batalha, fazendo com que o Evangelion enlouqueça e mate o Anjo sozinho.</p>
+    </div>
+    <button onclick="window.location.href='segunda_pagina.html'">
+        próxima página
+    </button>
+    <h6>Creator: Hideaki Anno</h6>
+    <img src="assets/112141.gif" class="gif-canto" alt="gif">
+    <img src="assets/eva_1.gif" class="gif-canto-de-cima" alt="gif">
+    
+
+<div class="music-player">
+
+    <img src="assets/capa evangelion.jpg" class="cover">
+
+    <div class="info">
+        <h2>Evangelion OP</h2>
+
+        <button id="playBtn">▶</button>
+    </div>
+
+ </div>
+
+ <audio id="musica" loop>
+    <source src="musicas/evangelion music.mp3" type="audio/mpeg">
+ </audio>
+
+ <script>
+
+ const musica = document.getElementById("musica");
+ const playBtn = document.getElementById("playBtn");
+
+ playBtn.addEventListener("click", () => {
+
+    if(musica.paused){
+
+        musica.play();
+
+        playBtn.innerHTML = "❚❚";
+
+    } else {
+
+        musica.pause();
+
+        playBtn.innerHTML = "▶";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
