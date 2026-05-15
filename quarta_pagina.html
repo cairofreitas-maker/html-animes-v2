@@ -78,14 +78,14 @@
 
 /* RESET */
 *{
-    margin:0;
-    padding:0;
+    margin:900;
+    padding:900;
     box-sizing:border-box;
 }
 
 body{
     overflow:hidden;
-    height:100vh;
+    height:10vh;
 
     background:
     linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
@@ -120,15 +120,21 @@ body{
 .drag-wrapper{
     position:fixed;
 
-    left:85px;
+    left:398px;
     top:250px;
 
-    width:300px;
-    height:500px;
+    width:3000px;
+    height:5000px;
 
     z-index:9999;
 }
+.drag-wrapper{
+    pointer-events: none;
+}
 
+#triangle{
+    pointer-events: auto;
+}
 /* SVG ocupa tudo */
 #rope-svg{
     position:absolute;
@@ -140,7 +146,7 @@ body{
 /* FIO */
 #rope{
     stroke:#111;
-    stroke-width:10;
+    stroke-width:7;
 
     fill:none;
 
@@ -164,7 +170,7 @@ body{
 #triangle{
     position:absolute;
 
-    width:90px;
+    width:190px;
     height:90px;
 
     cursor:grab;
@@ -285,6 +291,13 @@ window.addEventListener("mousemove", (e) => {
     updateRope();
 });
 </script>
+<div class="serra-diagonal-esquerda"></div>
+<div class="serra-diagonal-direita"></div>
+<div class="container2">
+    <div class="serra-diagonal-esquerda"></div>
+
+    <div class="serra-diagonal-direita"></div>
+</div>
 </body>
 </html>
     </body>
